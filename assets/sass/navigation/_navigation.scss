@@ -1,0 +1,44 @@
+.sidenav {
+
+	&.sidenav-fixed {
+		height: calc(100% - 30px);
+		margin: 15px;
+		margin-right: 0;
+		border-radius: 8px;
+	}
+
+	li.logo > a {
+		height: unset;
+		line-height: 1em;
+		border-bottom: 1px solid #eee;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.site-header {
+	a {
+		height: 100%;
+	}
+
+	img {
+		width: auto;
+		height: 100%;
+	}
+}
+
+nav {
+	background: #fff;
+
+	a {
+		@extend .black-text;
+	}
+}
+
+@media (min-width: 993px) {
+	.site-header {
+		display: none;
+	}
+}
