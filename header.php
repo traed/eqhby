@@ -25,41 +25,30 @@ namespace eqhby;
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<!-- Mobile menu -->
-	<ul id="slide-out" class="sidenav sidenav-fixed">
-		<li class="logo">
-			<a id="logo-container" href="/" class="brand-logo">
-				<img src="<?php echo Theme::get_url('assets/img/logo.png'); ?>" alt="Logo">
-			</a>
-		</li>
-		<?php
-			if(($locations = get_nav_menu_locations()) && isset($locations['primary'])) {
-				$menu = get_term( $locations['primary'], 'nav_menu' );
-				$menu_items = wp_get_nav_menu_items($menu->term_id);
+<div id="page" class="site container">
 	
-				foreach($menu_items as $item) {
-					if($item->menu_item_parent == 0) {
-						printf('<li class="bold"><a href="%s">%s</a></li>', get_permalink($item), $item->title);
-					} else {
-
-					}
-					// Check for submenus
-				}
-			}
-		?>
-	</ul>
-
 	<header class="site-header">
-		<nav>
-			<div class="nav-wrapper">
-				<a id="logo-container" href="/" class="brand-logo">
-					<img src="<?php echo Theme::get_url('assets/img/logo.png'); ?>" alt="Logo">
-				</a>
-				<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-			</div>
+		<a id="logo-container" href="/" class="brand-logo">
+			<img src="<?php echo Theme::get_url('assets/img/logo.png'); ?>" alt="Logo">
+		</a>
+
+		<nav class="z-depth-0 nav-center">
+			<!-- Mobile menu -->
+			<?php wp_nav_menu(array(
+				'menu' => 'primary',
+				'container' => false,
+				'menu_class' => 'sidenav',
+				'menu_id' => 'mobile-menu'
+			)); ?>
+			<!-- #Mobile menu -->
+
+			<a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			<?php wp_nav_menu(array(
+				'menu' => 'primary',
+				'container_class' => 'nav-wrapper',
+				'menu_class' => 'hide-on-med-and-down'
+			)); ?>
 		</nav>
 	</header>
-	<!-- #Modile menu -->
 
 	<div id="content" class="site-content">
