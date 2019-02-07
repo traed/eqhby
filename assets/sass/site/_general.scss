@@ -1,0 +1,33 @@
+.site {
+	max-width: 1400px;
+}
+
+.site-info {
+	padding: 25px;
+	display: flex;
+	justify-content: center;
+}
+
+
+.site-header {
+	border-top: 5px solid $color__primary;
+
+	.brand-logo {
+		display: block;
+		text-align: center;
+		height: 170px;
+		padding-top: 30px;
+		padding-bottom: 15px;
+	}
+
+	img {
+		width: auto;
+		height: 100%;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.site-content {
+		padding-left: 15px;
+	}
+}

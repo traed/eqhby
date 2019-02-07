@@ -30,8 +30,6 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php eqhby_post_thumbnail(); ?>
-
 	<div class="entry-content">
 		<?php
 		the_content( sprintf(
@@ -45,11 +43,6 @@
 				)
 			),
 			get_the_title()
-		) );
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'eqhby' ),
-			'after'  => '</div>',
 		) );
 		?>
 	</div><!-- .entry-content -->

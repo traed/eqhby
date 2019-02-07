@@ -2,8 +2,19 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font;
 }
 
-.entry-title {
-	color: #fff;
-	text-align: center;
+h1 {
+	line-height: 1.5em;
+	
+	&:after {
+		content: "";
+		height: 5px;
+		width: 100%;
+		display: block;
+		background: $color__primary;
+		max-width: 200px;
+	}
+}
+
+.page .entry-title {
 	display: none;
 }
