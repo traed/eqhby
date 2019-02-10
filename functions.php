@@ -39,6 +39,11 @@ class Theme {
 		 * Customizer additions.
 		 */
 		require get_template_directory() . '/inc/customizer.php';
+
+		/**
+		 * Custom Gutenberg blocks.
+		 */
+		require get_template_directory() . '/inc/blocks.php';
 	}
 
 	public function setup() {

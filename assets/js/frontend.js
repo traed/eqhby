@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 	$('.sidenav').sidenav({
 		menuWidth: 300,
-		edge: 'left',
+		edge: 'right',
 		closeOnClick: true
 	});
 });

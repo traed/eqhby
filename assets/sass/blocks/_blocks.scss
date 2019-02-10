@@ -15,21 +15,70 @@
 	border-radius: 8px;
 }
 
-.ugb-image-box__title {
-	font-size: 3em;
-}
-
-.site .ugb-header {
-	padding: 11rem 4rem;
-	margin-top: 0;
-	margin-bottom: 2em;
-
-	.ugb-header__title {
-		font-size: 6.5em;
-		line-height: 1em;
+.block-image-link {
+	.wp-block-image {
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	
+		figure {
+			position: relative;
+		}
+	
+		figcaption {
+			position: absolute;
+			top: 5%;
+			left: 0;
+			margin: 0;
+			font-family: $heading-font;
+			font-size: $h2-fontsize;
+			background: #fff;
+			padding: 0 10px;
+		}
 	}
 
-	.ugb-header__subtitle {
-		font-size: 1.5em;
+	& > a {
+		display: block;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			@include transition(background 0.2s ease);
+		}
+
+		&:hover:before {
+			background: rgba(0, 0, 0, 0.3);
+		}
+	}
+}
+
+.ghostkit-grid-gap-sm {
+	.ghostkit-grid-with-bg>.nk-awb,
+	.ghostkit-col-with-bg>.nk-awb {
+		left: 7.5px;
+		right: 7.5px;
+	}
+}
+
+.ghostkit-grid-gap-md {
+	.ghostkit-grid-with-bg>.nk-awb,
+	.ghostkit-col-with-bg>.nk-awb {
+		left: 15px;
+		right: 15px;
+	}
+}
+
+.ghostkit-grid-gap-lg {
+	.ghostkit-grid-with-bg>.nk-awb,
+	.ghostkit-col-with-bg>.nk-awb {
+		left: 22.5px;
+		right: 22.5px;
 	}
 }
