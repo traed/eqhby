@@ -8,7 +8,16 @@
 	}
 
 	.post {
-		padding: 1em;
-		margin-bottom: 1em;
+		a {
+			display: block;
+			padding: 1em;
+			margin-bottom: 1em;
+			border: 1px dashed $color__border;
+			color: $off-black;
+
+			&:hover {
+				background-color: $color__light-gray;
+			}
+		}
 	}
 }

@@ -21,7 +21,6 @@ class Theme {
 		add_action('after_setup_theme', array($this, 'custom_image_sizes'));
 		add_action('widgets_init', array($this, 'widgets'));
 		add_action('wp_enqueue_scripts', array($this, 'assets'));
-		add_action('post_class', array($this, 'post_class'), 10, 3);
 
 		add_filter('show_admin_bar', '__return_false');
 
@@ -147,15 +146,6 @@ class Theme {
 		$path = trim($path, '/ ');
 
 		return get_template_directory_uri() . '/' . $path;
-	}
-
-
-	public function post_class($classes, $class, $post_id) {
-		if(!is_singular() && in_array('post', $classes)) {
-			$classes[] = 'z-depth-1';
-		}
-
-		return $classes;
 	}
 }
 

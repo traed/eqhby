@@ -2,18 +2,24 @@
 // Typography
 $font-stack: 'Open Sans', Arial, sans-serif;
 $heading-font: 'Oswald', Helvetica, sans-serif;
-$off-black: rgba(0, 0, 0, 0.87) !default;
+$off-black: rgba(0, 0, 0, 0.87);
 
 // Heading Styles
-$h1-fontsize: 4.2rem !default;
-$h2-fontsize: 2.25rem !default;
-$h3-fontsize: 2rem !default;
-$h4-fontsize: 1.5rem !default;
-$h5-fontsize: 1.25rem !default;
-$h6-fontsize: 1rem !default;
+$h1-fontsize: 4.2rem;
+$h2-fontsize: 2.25rem;
+$h3-fontsize: 2rem;
+$h4-fontsize: 1.5rem;
+$h5-fontsize: 1.25rem;
+$h6-fontsize: 1rem;
 
 $navbar-height: 55px;
 
 // Colors
 $color__primary: #f2963f;
-$color__border: #eee;
+$color__separator: #eee;
+$color__border: #ccc;
+$color__light-gray: #f1f1f1;
+
+// Breakpoints
+$medium-screen-up: 768px;
+$medium-screen: 767px;

@@ -42,13 +42,13 @@ nav.nav-center {
 		a {
 			min-width: 200px;
 			text-align: left;
-			border-bottom: 1px solid $color__border;
+			border-bottom: 1px solid $color__separator;
 		}
 	}
 
 	ul {
 		text-align: center;
-		
+
 		li {
 			display: inline-block;
 			float: none;

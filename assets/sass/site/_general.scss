@@ -1,7 +1,12 @@
+body {
+	border-top: 5px solid $color__primary;
+}
+
 .site {
 	max-width: 1400px;
 	width: 100%;
 	margin: 0 auto;
+	padding: 0 50px;
 }
 
 .site-info {
@@ -10,10 +15,7 @@
 	justify-content: center;
 }
 
-
 .site-header {
-	border-top: 5px solid $color__primary;
-
 	.brand-logo {
 		display: block;
 		text-align: center;
@@ -28,7 +30,7 @@
 	}
 }
 
-@media (max-width: 992px) {
+@media (max-width: $medium-screen) {
 	.site-header .brand-logo {
 		height: 60px;
 		padding: 2px;
