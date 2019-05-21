@@ -20,4 +20,14 @@
 			}
 		}
 	}
+
+	.simcal-calendar {
+		font-size: 15px;
+	}
+}
+
+.single-post article.post,
+.content-area.narrow article.page {
+	max-width: 800px;
+	margin: 0 auto;
 }
