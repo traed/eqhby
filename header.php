@@ -28,9 +28,9 @@ namespace eqhby;
 <div id="page" class="site container">
 	
 	<header class="site-header">
-		<a id="logo-container" href="/" class="brand-logo">
-			<img src="<?php echo Theme::get_url('assets/img/logo.png'); ?>" alt="Logo">
-		</a>
+		<div id="logo-container" class="brand-logo">
+			<a href="/"><img src="<?php echo Theme::get_url('assets/img/logo.png'); ?>" alt="Logo"></a>
+		</div>
 
 		<nav class="z-depth-0 nav-center">
 			<!-- Mobile menu -->
