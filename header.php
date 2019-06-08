@@ -38,7 +38,8 @@ namespace eqhby;
 				'menu' => 'primary',
 				'container' => false,
 				'menu_class' => 'sidenav',
-				'menu_id' => 'mobile-menu'
+				'menu_id' => 'mobile-menu',
+				'items_wrap' => '<ul id="%1$s" class="%2$s"><li class="menu-item"><a class="sidenav-close" href="#!"><i class="material-icons">close</i></a></li>%3$s</ul>'
 			)); ?>
 			<!-- #Mobile menu -->
 
@@ -46,7 +47,7 @@ namespace eqhby;
 			<?php wp_nav_menu(array(
 				'menu' => 'primary',
 				'container_class' => 'nav-wrapper',
-				'menu_class' => 'hide-on-med-and-down'
+				'menu_class' => 'hide-on-med-and-down main-menu'
 			)); ?>
 		</nav>
 	</header>
