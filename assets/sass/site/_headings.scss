@@ -1,15 +1,29 @@
-h1, h2, h3, h4, h5, h6 {
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
 	font-family: $heading-font;
 }
 
-h1 {
+.h1 { font-size: $h1-fontsize; line-height: 110%; margin: ($h1-fontsize / 1.5) 0 ($h1-fontsize / 2.5) 0;}
+.h2 { font-size: $h2-fontsize; line-height: 110%; margin: ($h2-fontsize / 1.5) 0 ($h2-fontsize / 2.5) 0;}
+.h3 { font-size: $h3-fontsize; line-height: 110%; margin: ($h3-fontsize / 1.5) 0 ($h3-fontsize / 2.5) 0;}
+.h4 { font-size: $h4-fontsize; line-height: 110%; margin: ($h4-fontsize / 1.5) 0 ($h4-fontsize / 2.5) 0;}
+.h5 { font-size: $h5-fontsize; line-height: 110%; margin: ($h5-fontsize / 1.5) 0 ($h5-fontsize / 2.5) 0;}
+.h6 { font-size: $h6-fontsize; line-height: 110%; margin: ($h6-fontsize / 1.5) 0 ($h6-fontsize / 2.5) 0;}
+
+h1, .h1 {
 	line-height: 1.5em;
+	text-align: center;
 	
 	&:after {
 		content: "";
 		height: 5px;
 		width: 100%;
 		display: block;
+		margin: 0 auto;
 		background: $color__primary;
 		max-width: 200px;
 	}
@@ -17,4 +31,14 @@ h1 {
 
 .home .entry-title {
 	display: none;
+}
+
+@media (max-width: $small-screen) {
+	h1, .h1 {
+		font-size: ($h1-fontsize * 0.7);
+
+		&:after {
+			max-width: 100px;
+		}
+	}
 }

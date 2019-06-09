@@ -82,3 +82,13 @@
 		right: 22.5px;
 	}
 }
+
+.maps-iframe {
+	height: 75vh !important;
+}
+
+@media (max-width: $small-screen) {
+	.maps-iframe {
+		height: 50vh !important;
+	}	
+}
