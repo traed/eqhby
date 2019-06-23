@@ -142,7 +142,7 @@ class Theme {
 		}
 	}
 
-	public function get_url($path = '') {
+	static public function get_url($path = '') {
 		$path = trim($path, '/ ');
 
 		return get_template_directory_uri() . '/' . $path;
