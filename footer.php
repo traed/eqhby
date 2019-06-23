@@ -15,7 +15,9 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<p>&copy; Mattias Forsman</p>
+			<div><a href="<?php echo home_url('ledare'); ?>" rel="nofollow">Logga in</a></div>
+			<p>&copy; Equmenia Hässelby</p>
+			<div><img src="<?php echo get_template_directory_uri() . '/assets/img/equmenia.png'; ?>" alt="Equmenia"></div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
