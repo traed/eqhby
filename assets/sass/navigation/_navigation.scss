@@ -12,6 +12,7 @@ nav {
 			}
 
 			&.current_page_item > a,
+			&.current_page_ancestor > a,
 			&:hover > a {
 				background: none;
 				color: $color__primary !important;
