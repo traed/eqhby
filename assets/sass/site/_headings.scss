@@ -29,10 +29,6 @@ h1, .h1 {
 	}
 }
 
-.home .entry-title {
-	display: none;
-}
-
 @media (max-width: $small-screen) {
 	h1, .h1 {
 		font-size: ($h1-fontsize * 0.7);

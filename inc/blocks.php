@@ -6,7 +6,7 @@ class Blocks {
 
 	public function __construct() {
 		add_action('after_setup_theme', array($this, 'add_acf_blocks'));
-		// add_filter('block_categories', array($this, 'register_block_categories'), 10, 2);
+		add_filter('block_categories', array($this, 'register_block_categories'), 10, 2);
 	}
 
 	
@@ -31,7 +31,16 @@ class Blocks {
 				'description'		=> 'En bild med en länk.',
 				'render_callback'	=> array($this, 'render_block'),
 				'icon' => 'format-image',
-				'category' => 'common'
+				'category' => 'custom'
+			));
+
+			acf_register_block(array(
+				'name'				=> 'posts',
+				'title'				=> 'Inlägg',
+				'description'		=> 'Snyggare bloginlägg.',
+				'render_callback'	=> array($this, 'render_block'),
+				'icon' => 'admin-post',
+				'category' => 'custom'
 			));
 		}
 	}

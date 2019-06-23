@@ -5,6 +5,11 @@
 		.entry-title {
 			margin-top: 0;
 		}
+
+		.entry-meta {
+			font-style: italic;
+			@extend .grey-text, .text-darken-2;
+		}
 	}
 
 	.post {
