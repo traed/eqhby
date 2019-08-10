@@ -9,6 +9,8 @@
  * @package eqhby
  */
 
+namespace eqhby;
+
 ?>
 
 	</main><!-- #content -->
