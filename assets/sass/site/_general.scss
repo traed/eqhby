@@ -22,6 +22,10 @@ body {
 	border-top: 5px solid $color__primary;
 }
 
+strong {
+	font-weight: 600;
+}
+
 .site {
 	max-width: 1400px;
 	width: 100%;
