@@ -37,7 +37,7 @@
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'eqhby' ),
+				__( 'Continue reading<span class="screen-reader-text sr-only"> "%s"</span>', 'eqhby' ),
 				array(
 					'span' => array(
 						'class' => array(),

@@ -1,0 +1,12 @@
+.site-main.navigation {
+	box-shadow: none;
+}
+
+.nav-links {
+	display: flex;
+	justify-content: space-between;
+
+	& > div:hover {
+		text-decoration: underline;
+	}
+}
