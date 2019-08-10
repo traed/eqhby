@@ -17,6 +17,10 @@
 	border-radius: 8px;
 }
 
+blockquote {
+	border-color: $color__primary;
+}
+
 .block-image-link {
 	.wp-block-image {
 		img {
