@@ -18,9 +18,8 @@ class Theme {
 	public function __construct() {
 		add_action('after_setup_theme', array($this, 'setup'));
 		add_action('after_setup_theme', array($this, 'content_width'), 0);
-		add_action('after_setup_theme', array($this, 'custom_image_sizes'));
-		add_action('widgets_init', array($this, 'widgets'));
 		add_action('wp_enqueue_scripts', array($this, 'assets'));
+		add_action('template_redirect', array($this, 'leader_only_page'));
 
 		add_filter('show_admin_bar', '__return_false');
 
@@ -106,26 +105,6 @@ class Theme {
 	}
 
 
-	public function custom_image_sizes() {
-		// add_image_size( 'my_image_size', 100, 75, true);
-	}
-
-
-	public function widgets() {
-		// register_sidebar(array(
-		// 	'name'          => esc_html__( 'Sidebar', 'webbmaffian-theme' ),
-		// 	'id'            => 'sidebar-1',
-		// 	'description'   => esc_html__( 'Add widgets here.', 'webbmaffian-theme' ),
-		// 	'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		// 	'after_widget'  => '</section>',
-		// 	'before_title'  => '<h2 class="widget-title">',
-		// 	'after_title'   => '</h2>',
-		// ));
-		
-		// register_widget(__NAMESPACE__ . '\<Widget Name>');
-	}
-
-
 	public function assets() {
 		if(!is_admin()) {
 			wp_dequeue_script('jquery');
@@ -146,6 +125,16 @@ class Theme {
 		$path = trim($path, '/ ');
 
 		return get_template_directory_uri() . '/' . $path;
+	}
+
+	public function leader_only_page() {
+		if(is_page('ledare') && !is_user_logged_in()) {
+			$redirect = http_build_query([
+				'redirect_to' => home_url('ledare')
+			]);
+			wp_redirect('/wp-login.php?' . $redirect);
+			exit;
+		}
 	}
 }
 
