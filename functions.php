@@ -20,6 +20,7 @@ class Theme {
 		add_action('after_setup_theme', array($this, 'content_width'), 0);
 		add_action('wp_enqueue_scripts', array($this, 'assets'));
 		add_action('template_redirect', array($this, 'leader_only_page'));
+		add_action('login_enqueue_scripts', array($this, 'change_login_logo'));
 
 		add_filter('show_admin_bar', '__return_false');
 
@@ -135,6 +136,19 @@ class Theme {
 			wp_redirect('/wp-login.php?' . $redirect);
 			exit;
 		}
+	}
+
+	public function change_login_logo() {
+		?> 
+		<style type="text/css"> 
+			body.login #login h1 a {
+				background-image: url(<?php echo get_template_directory_uri() . '/assets/img/logo.png'; ?>);
+				background-position: center center;
+				background-size: 185px;
+				width: 185px;
+			}
+		</style>
+		<?php 
 	}
 }
 
