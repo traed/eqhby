@@ -23,6 +23,9 @@ blockquote {
 
 .block-image-link {
 	.wp-block-image {
+		margin-left: 0;
+		margin-right: 0;
+
 		img {
 			display: block;
 			width: 100%;
@@ -48,6 +51,7 @@ blockquote {
 	& > a {
 		display: block;
 		position: relative;
+		color: $color__gray;
 
 		&:before {
 			content: '';
