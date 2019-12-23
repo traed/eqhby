@@ -21,6 +21,9 @@ $color__border: #ccc;
 $color__light-gray: #f1f1f1;
 $color__gray: #555d66;
 
+$primary-color: $color__gray;
+$secondary-color: $color__primary;
+
 // Breakpoints
 $medium-screen-up: 768px;
 $medium-screen: 767px;
