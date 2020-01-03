@@ -150,6 +150,20 @@ class Theme {
 		</style>
 		<?php 
 	}
+
+
+	static public function get_date($str) {
+		$timezone_string = get_option('timezone_string');
+		if(!$timezone_string) {
+			$timezone_string = timezone_name_from_abbr('', 3600 * (float)get_option('gmt_offset'), 0);
+		}
+		$tz = new \DateTimeZone($timezone_string);
+		
+		$date = new \DateTime($str);
+		$date->setTimezone($tz);
+
+		return $date;
+	}
 }
 
 new Theme();

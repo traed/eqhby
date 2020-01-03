@@ -42,6 +42,15 @@ class Blocks {
 				'icon' => 'admin-post',
 				'category' => 'custom'
 			));
+
+			acf_register_block(array(
+				'name'				=> 'content',
+				'title'				=> 'Innehåll',
+				'description'		=> 'Visa innehåll från en annan post.',
+				'render_callback'	=> array($this, 'render_block'),
+				'icon' => 'text-page',
+				'category' => 'custom'
+			));
 		}
 	}
 

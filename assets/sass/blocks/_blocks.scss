@@ -103,12 +103,22 @@ blockquote {
 		padding: 1rem;
 	
 		&:hover {
-			background-color: #f1f1f1;
+			background-color: $color__light-gray;
 		}
 	}
 
 	.ghostkit-accordion-item-content {
 		padding: 0 1rem 1rem;
+	}
+}
+
+.ghostkit-icon-box {
+	&.ghostkit-icon-box-with-link:hover {
+		background-color: $color__light-gray;
+	}
+
+	.ghostkit-icon-box-content p {
+		margin-top: 0;
 	}
 }
 
