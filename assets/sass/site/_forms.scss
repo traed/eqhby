@@ -2,10 +2,24 @@ select {
 	display: block;
 }
 
-[type=checkbox]:not(:checked), [type=checkbox]:checked {
-	position: static;
-	opacity: 1;
-	pointer-events: initial;
+// 	[type=checkbox]:not(:checked), [type=checkbox]:checked {
+// 		position: static;
+// 		opacity: 1;
+// 		pointer-events: initial;
+// 	}
+
+.modal .modal-footer {
+	.btn {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	form {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-end;
+		align-items: center;
+	}
 }
 
 .bkl-login {

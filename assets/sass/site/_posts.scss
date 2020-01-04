@@ -15,16 +15,16 @@
 	}
 
 	.post {
-		a {
+		a, .link-wrapper {
 			display: block;
 			padding: 1em;
 			margin-bottom: 1em;
 			border: 1px dashed $color__border;
 			color: $off-black;
+		}
 
-			&:hover {
-				background-color: $color__light-gray;
-			}
+		a:hover {
+			background-color: $color__light-gray;
 		}
 	}
 
@@ -34,8 +34,7 @@
 }
 
 .single-post article.post,
-.content-area.narrow article.page,
-.bkl .content-area.narrow .site-main {
+.content-area.narrow article.page {
 	max-width: 800px;
 	margin: 0 auto;
 }
