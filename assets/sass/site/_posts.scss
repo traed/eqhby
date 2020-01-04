@@ -15,7 +15,7 @@
 	}
 
 	.post {
-		a, .link-wrapper {
+		a:not(.btn), .link-wrapper {
 			display: block;
 			padding: 1em;
 			margin-bottom: 1em;
@@ -23,7 +23,7 @@
 			color: $off-black;
 		}
 
-		a:hover {
+		a:not(.btn):hover {
 			background-color: $color__light-gray;
 		}
 	}
@@ -34,7 +34,8 @@
 }
 
 .single-post article.post,
-.content-area.narrow article.page {
+.content-area.narrow article.page,
+.bkl .content.narrow {
 	max-width: 800px;
 	margin: 0 auto;
 }
