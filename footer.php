@@ -17,7 +17,6 @@ namespace eqhby;
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<div><a href="<?php echo home_url('ledare'); ?>" rel="nofollow">Logga in</a></div>
 			<p>&copy; Equmenia Hässelby</p>
 			<a href="https://equmenia.se" target="_blank"><img src="<?php echo Theme::get_url('/assets/img/equmenia.png'); ?>" alt="Equmenia"></a>
 		</div><!-- .site-info -->
