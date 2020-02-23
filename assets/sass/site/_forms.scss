@@ -47,4 +47,24 @@ select {
 	.frm_final_submit {
 		@extend .btn;
 	}
+
+	.frm_message,
+	.frm_error_style {
+		padding: 10px 20px;
+		border: 1px solid;
+		border-radius: 5px;
+		margin-bottom: 20px;
+	}
+
+	.frm_message {
+		border-left: 4px solid $secondary-color;
+	}
+
+	.frm_error_style {
+		border-left: 4px solid $error-color;
+	}
+
+	.frm_error {
+		color: $error-color;
+	}
 }
