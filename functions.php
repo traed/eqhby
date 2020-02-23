@@ -23,6 +23,7 @@ class Theme {
 		add_action('login_enqueue_scripts', array($this, 'change_login_logo'));
 
 		add_filter('show_admin_bar', '__return_false');
+		add_filter('frm_field_label_seen', array($this, 'modify_formidable_label'), 10, 3);
 
 		/**
 		 * Custom template tags for this theme.
@@ -149,6 +150,16 @@ class Theme {
 			}
 		</style>
 		<?php 
+	}
+
+
+	public function modify_formidable_label($opt, $opt_key, $field) {
+		$opt = \FrmFieldsController::check_label($opt);
+		if(in_array($field['type'], ['checkbox', 'radio']) && strpos($opt, '<span>') !== 0) {
+			$opt = '<span>' . $opt . '</span>';
+		}
+		
+		return $opt;
 	}
 
 
