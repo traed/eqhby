@@ -42,4 +42,8 @@ select {
 	label {
 		font-size: 0.9rem;
 	}
+
+	.frm_button_submit {
+		@extend .btn;
+	}
 }

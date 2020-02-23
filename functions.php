@@ -24,6 +24,8 @@ class Theme {
 
 		add_filter('show_admin_bar', '__return_false');
 		add_filter('frm_field_label_seen', array($this, 'modify_formidable_label'), 10, 3);
+		add_filter('frm_field_div_classes', array($this, 'add_input_class'), 10, 2);
+		add_filter('frm_field_classes', array($this, 'add_btn_class'), 10, 2);
 
 		/**
 		 * Custom template tags for this theme.
@@ -158,8 +160,28 @@ class Theme {
 		if(in_array($field['type'], ['checkbox', 'radio']) && strpos($opt, '<span>') !== 0) {
 			$opt = '<span>' . $opt . '</span>';
 		}
-		
+
 		return $opt;
+	}
+
+
+	public function add_input_class($classes, $field) {
+		if(in_array($field['type'], ['text', 'email', 'password', 'textarea']) && strpos($classes, 'input-field') === false) {
+			$classes .= ' input-field';
+		}
+
+		return $classes;
+	}
+
+
+	public function add_btn_class($classes, $field) {
+		if(in_array($field['type'], ['button', 'submit'])) {
+			$classes .= ' btn';
+		} elseif($field['type'] === 'textarea') {
+			$classes .= ' materialize-textarea';
+		}
+
+		return $classes;
 	}
 
 
