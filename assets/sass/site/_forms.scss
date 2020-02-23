@@ -43,7 +43,8 @@ select {
 		font-size: 0.9rem;
 	}
 
-	.frm_button_submit {
+	.frm_button_submit,
+	.frm_final_submit {
 		@extend .btn;
 	}
 }
