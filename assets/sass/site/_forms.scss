@@ -2,12 +2,6 @@ select {
 	display: block;
 }
 
-// 	[type=checkbox]:not(:checked), [type=checkbox]:checked {
-// 		position: static;
-// 		opacity: 1;
-// 		pointer-events: initial;
-// 	}
-
 .modal .modal-footer {
 	.btn {
 		margin-left: 20px;
@@ -31,13 +25,21 @@ select {
 	margin-bottom: .5rem;
 }
 
-.frm_checkbox {
-	input[type="checkbox"] {
-		position: absolute !important;
+.frm_forms {
+	fieldset {
+		padding: 0;
+		border: none;
+	}
+
+	.frm_form_field {
+		margin-bottom: 20px;
+	}
+
+	h3 {
+		clear: both;
 	}
 
 	label {
-		padding-left: 0 !important;
-		text-indent: 0 !important;
+		font-size: 0.9rem;
 	}
 }
