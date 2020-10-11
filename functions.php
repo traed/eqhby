@@ -115,13 +115,13 @@ class Theme {
 			wp_enqueue_script(self::SLUG . '-jquery', get_template_directory_uri() . '/assets/js/jquery.min.js', array(), '3.3.1', false);
 
 			if(self::DEV) {
-				wp_enqueue_script(self::SLUG . '-materialize-js', get_template_directory_uri() . '/assets/js/materialize.js', array(), self::VERSION, true);
+				wp_enqueue_script(self::SLUG . '-materialize-js', get_template_directory_uri() . '/assets/js/materialize.js', array(self::SLUG . '-jquery'), self::VERSION, true);
 			} else {
-				wp_enqueue_script(self::SLUG . '-materialize-js', get_template_directory_uri() . '/assets/js/materialize.min.js', array(), self::VERSION, true);
+				wp_enqueue_script(self::SLUG . '-materialize-js', get_template_directory_uri() . '/assets/js/materialize.min.js', array(self::SLUG . '-jquery'), self::VERSION, true);
 			}
 
 			wp_enqueue_style(self::SLUG . '-frontend-css', get_template_directory_uri() . '/assets/css/style.css', array(), self::VERSION);
-			wp_enqueue_script(self::SLUG . '-frontend-js', get_template_directory_uri() . '/assets/js/frontend.js', array(), self::VERSION, true);
+			wp_enqueue_script(self::SLUG . '-frontend-js', get_template_directory_uri() . '/assets/js/frontend.js', array(self::SLUG . '-materialize-js'), self::VERSION, true);
 		}
 	}
 
