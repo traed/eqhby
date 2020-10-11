@@ -13,7 +13,7 @@ class Theme {
 	const VERSION = '1.0.0';
 	const SLUG = 'eqhby';
 	const CONTENT_WIDTH = 640;
-	const DEV = true;
+	const DEV = false;
 
 	public function __construct() {
 		add_action('after_setup_theme', array($this, 'setup'));
