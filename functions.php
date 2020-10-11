@@ -10,7 +10,7 @@
 namespace eqhby;
 
 class Theme {
-	const VERSION = '1.0.0';
+	const VERSION = '1.0.1';
 	const SLUG = 'eqhby';
 	const CONTENT_WIDTH = 640;
 	const DEV = false;
